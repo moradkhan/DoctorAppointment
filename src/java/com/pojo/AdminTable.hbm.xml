@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 5, 2018 12:42:04 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pojo.AdminTable" table="admin_table" catalog="doctor_db" optimistic-lock="version">
+        <id name="did" type="int">
+            <column name="dId" />
+            <generator class="assigned" />
+        </id>
+        <property name="aid" type="string">
+            <column name="aId" length="20" />
+        </property>
+        <property name="apass" type="string">
+            <column name="aPass" length="20" />
+        </property>
+        <property name="dpass" type="string">
+            <column name="dPass" length="20" />
+        </property>
+        <property name="dname" type="string">
+            <column name="dName" length="20" />
+        </property>
+        <property name="daddress" type="string">
+            <column name="dAddress" length="40" />
+        </property>
+        <property name="dmobile" type="string">
+            <column name="dMobile" length="20" />
+        </property>
+        <property name="dcategory" type="string">
+            <column name="dCategory" length="20" />
+        </property>
+        <property name="demail" type="string">
+            <column name="dEmail" length="20" />
+        </property>
+        <property name="time" type="string">
+            <column name="time" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

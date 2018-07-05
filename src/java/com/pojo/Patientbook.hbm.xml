@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 5, 2018 12:42:04 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Patientbook" table="patientbook" catalog="doctor_db" optimistic-lock="version">
+        <id name="appointId" type="int">
+            <column name="appointId" />
+            <generator class="assigned" />
+        </id>
+        <property name="category" type="string">
+            <column name="category" length="20" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="20" />
+        </property>
+        <property name="bdate" type="date">
+            <column name="bDate" length="10" />
+        </property>
+        <property name="time" type="string">
+            <column name="time" length="20" />
+        </property>
+        <property name="patientId" type="java.lang.Integer">
+            <column name="patientId" />
+        </property>
+        <property name="doctorName" type="string">
+            <column name="doctorName" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

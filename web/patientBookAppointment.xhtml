@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Book Appointment </title>
+        <h:outputStylesheet name="/css/bootstrap.min.css"/>  
+        <h:outputStylesheet name="/css/font-awesome.min.css"/>  
+        <style type="text/css">  
+            table4 {  
+                border-collapse: collapse;  
+                width: 100%;  
+            }  
+            th, td {  
+                text-align: left;  
+                padding: 8px;  
+            }  
+
+            tr{background-color: #f2f2f2} 
+            th {  
+                background-color: #4CAF50;  
+                color: white;  
+            }  
+        </style> 
+    </h:head>
+    <h:body>
+        <h:form id="form" class="form-horizontal" style="margin-left: 220px"><hr/>
+           <div class="form-group">  
+                            <div class="col-sm-3"></div>  
+                            <div  class="col-sm-4">  
+                                <h2 style="text-align: center">New Booking</h2>  
+                            </div>  
+                        </div><hr/>
+                        <div class="form-group">  
+                            <h:outputLabel  class="control-label col-sm-4" value="Appointment Id :"/>
+                            <div class="col-sm-4">  
+                                <h:inputText id="appointment-id" class="form-control" value="#{book.appointId}" style="width:200px;"/>    
+                            </div>  
+                        </div>
+                        <div class="form-group">  
+                            <h:outputLabel  class="control-label col-sm-4" value="Category :"/>
+
+
+                            <div class="col-sm-4">  
+                                <h:selectOneMenu id="category-id" value="#{book.category}" style="width:200px;">  
+                                    <f:selectItem itemValue="s" itemLabel="---Select---" /> 
+                                    <f:selectItem itemValue="General" itemLabel="General" /> 
+                                    <f:selectItem itemValue="Bone" itemLabel="Bone" />
+                                    <f:selectItem itemValue="Heart" itemLabel="Heart" />
+                                    <f:selectItem itemValue="Kidney" itemLabel="Kidney" />
+                                    <f:selectItem itemValue="Plastic" itemLabel="Plastic" />
+                                </h:selectOneMenu>
+
+                            </div>  
+                        </div>
+                        <div class="form-group">  
+                            <h:outputLabel  class="control-label col-sm-4" value="Doctor :"/>
+                            <div class="col-sm-4">  
+                                <h:selectOneMenu id="type-id" value="#{book.type}" style="width:200px;">  
+                                    <f:selectItem itemValue="s" itemLabel="---Select---" /> 
+                                    <f:selectItem itemValue="Physician" itemLabel="Physician" /> 
+                                    <f:selectItem itemValue="Dentist" itemLabel="Dentist" />
+                                    <f:selectItem itemValue="Neurologist" itemLabel="Neurologist" />
+                                    <f:selectItem itemValue="Cardiologist" itemLabel="Cardiologist" />
+                                    <f:selectItem itemValue="Cardiologist" itemLabel="Cardiologist" />
+                                </h:selectOneMenu> 
+                            </div>  
+                        </div>
+                        <div class="form-group">  
+                            <h:outputLabel  class="control-label col-sm-4" value="Date :"/>
+                            <div class="col-sm-4">  
+                                <p:calendar mode="popup" value="#{book.bdate}"/>    
+                            </div>  
+                        </div>
+                        <div class="form-group">  
+                            <h:outputLabel  class="control-label col-sm-4" value="Time :"/>
+                            <div class="col-sm-4">  
+                                <h:inputText id="time-id" class="form-control" value="#{book.time}" style="width:200px;"/>    
+                            </div>  
+                        </div>
+
+                        <div class="form-group">  
+                            <h:outputLabel  class="control-label col-sm-4" />
+                            <div class="col-sm-2">  
+                                <center> 
+                                    <h:commandButton value="Booking" action="#{book.doBook()}"
+                                                     class="btn btn-group" style="width: 100px;"/>
+                                </center>
+                            </div>  
+                        </div>
+        </h:form>
+    </h:body>
+</html>
+

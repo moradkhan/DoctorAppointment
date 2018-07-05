@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Patient Details </title>
+        <h:outputStylesheet name="/css/bootstrap.min.css"/>  
+        <h:outputStylesheet name="/css/font-awesome.min.css"/>  
+        <style type="text/css">  
+            table4 {  
+                border-collapse: collapse;  
+                width: 100%;  
+            }  
+            th, td {  
+                text-align: left;  
+                padding: 8px;  
+            }  
+
+            tr{background-color: #f2f2f2} 
+            th {  
+                background-color: #4CAF50;  
+                color: white;  
+            }  
+        </style> 
+    </h:head>
+    <h:body>
+        <h:form id="form" class="form-horizontal">
+            <div class="form-group">  
+                <div class="col-sm-4"></div>  
+                <div  class="col-sm-4">  
+                    <h2 style="text-align: center">Patient Registration</h2>  
+                </div>  
+            </div><hr/>
+
+            <div class="form-group">  
+                <h:outputLabel  class="control-label col-sm-4" value="Patient Id :"/>
+                <div class="col-sm-4">  
+                    <h:inputText id="pid-id" class="form-control" value="#{patient.id}"/>    
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel  class="control-label col-sm-4" value="Password :"/>
+                <div class="col-sm-4">  
+                    <h:inputSecret id="pass-id" class="form-control" value="#{patient.password}"/>    
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel  class="control-label col-sm-4" value="Name :"/>
+                <div class="col-sm-4">  
+                    <h:inputText id="name-id" class="form-control" value="#{patient.name}"/>    
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel  class="control-label col-sm-4" value="Address :"/>
+                <div class="col-sm-4">  
+                    <h:inputTextarea id="address-id" class="form-control" value="#{patient.address}"/>    
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel  class="control-label col-sm-4" value="Mobile No :"/>
+                <div class="col-sm-4">  
+                    <h:inputText id="mobile-id" class="form-control" value="#{patient.mobileNo}"/>    
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel  class="control-label col-sm-4" value="Email :"/>
+                <div class="col-sm-4">  
+                    <h:inputText id="email-id" class="form-control" value="#{patient.email}"/>    
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel for="gender" class="control-label col-sm-4" value="Gender :"/> 
+                <div class="col-sm-4">  
+                    <h:selectOneRadio id="gerder-id" value="#{patient.gender}">  
+                        <f:selectItem itemValue="M" itemLabel="Male" /> 
+                        <f:selectItem itemValue="F" itemLabel="Female" />
+                    </h:selectOneRadio>  
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel  class="control-label col-sm-4" value="Age :"/>
+                <div class="col-sm-4">  
+                    <h:inputText id="age-id" class="form-control" value="#{patient.age}"/>    
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel  class="control-label col-sm-4" />
+                <div class="col-sm-4">  
+                    <center> 
+                        <h:commandButton value="Save" class="btn btn-success" style="width: 100px;"
+                         actionListener="#{patient.doInsert()}" action="patient_login.xhtml"/>
+                    </center>
+                </div>  
+            </div>
+        </h:form>
+    </h:body>
+</html>
+

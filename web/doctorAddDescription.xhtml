@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Doctor Description </title>
+        <h:outputStylesheet name="/css/bootstrap.min.css"/>  
+        <h:outputStylesheet name="/css/font-awesome.min.css"/>  
+        <style type="text/css">  
+            table4 {  
+                border-collapse: collapse;  
+                width: 100%;  
+            }  
+            th, td {  
+                text-align: left;  
+                padding: 8px;  
+            }  
+
+            tr{background-color: #f2f2f2} 
+            th {  
+                background-color: #4CAF50;  
+                color: white;  
+            }  
+        </style> 
+    </h:head>
+    <h:body>
+        <h:form id="form" class="form-horizontal">
+            <div class="form-group">  
+                <div class="col-sm-4"></div>  
+                <div  class="col-sm-4">  
+                    <h2 style="text-align: center">Add Treatment</h2>  
+                </div>  
+            </div><br></br>
+            
+            <div class="form-group">  
+                <h:outputLabel  class="control-label col-sm-4" value="Patient Id :"/>
+                <h:commandButton value="Search" class="btn btn-success" style="width: 80px;"></h:commandButton>  
+                <div class="col-sm-4">  
+                    <h:inputText id="cid-id" class="form-control"/>    
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel  class="control-label col-sm-4" value="Name :"/>
+                <div class="col-sm-4">  
+                    <h:inputText id="name-id" class="form-control"/>    
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel  class="control-label col-sm-4" value="Treatment For :"/>
+                <div class="col-sm-4">  
+                    <h:inputText id="treatmentfor-id" class="form-control"/>    
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel  class="control-label col-sm-4" value="Treatment :"/>
+                <div class="col-sm-4">  
+                    <h:inputText id="treatment-id" class="form-control"/>    
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel  class="control-label col-sm-4" value="** Note :"/>
+                <div class="col-sm-4">  
+                    <h:inputText id="note-id" class="form-control"/>    
+                </div>  
+            </div>
+            <div class="form-group">  
+                <h:outputLabel  class="control-label col-sm-4" />
+                <div class="col-sm-4">  
+                    <center> <h:commandButton value="Submit" class="btn btn-success" style="width: 100px;"></h:commandButton></center>
+                </div> 
+                   
+            </div>
+        </h:form>
+    </h:body>
+</html>
+

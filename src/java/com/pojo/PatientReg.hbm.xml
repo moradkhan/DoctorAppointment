@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 5, 2018 12:42:04 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pojo.PatientReg" table="patient_reg" catalog="doctor_db" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" length="20" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="20" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="20" />
+        </property>
+        <property name="mobileNo" type="string">
+            <column name="mobile_no" length="20" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="20" />
+        </property>
+        <property name="gender" type="string">
+            <column name="gender" length="20" />
+        </property>
+        <property name="age" type="string">
+            <column name="age" length="20" />
+        </property>
+        <property name="bookDate" type="date">
+            <column name="bookDate" length="10" />
+        </property>
+        <property name="treatment" type="string">
+            <column name="treatment" length="20" />
+        </property>
+        <property name="treatmentFor" type="string">
+            <column name="treatmentFor" length="20" />
+        </property>
+        <property name="feedback" type="string">
+            <column name="feedback" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>
